@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	<context:annotation-config></context:annotation-config>
+	<context:component-scan
+		base-package="edu.wccnet.jopataylor.cps_278_mp2_xml_try2">
+	</context:component-scan>
+
+	<bean id="char1"
+		class="edu.wccnet.jopataylor.cps_278_mp2_xml_try2.Character">
+		
+		<constructor-arg name="name" value="Arthur"></constructor-arg>
+		
+		
+		<constructor-arg name="fightingPower" ref="styleHands">
+		</constructor-arg>
+	</bean>
+
+	<bean id="char2"
+		class="edu.wccnet.jopataylor.cps_278_mp2_xml_try2.Character">
+		<constructor-arg name="name" value="Solaire"></constructor-arg>
+		
+		
+		<constructor-arg name="fightingPower" ref="styleSword">
+		</constructor-arg>
+	</bean>
+
+
+
+
+
+	
+
+
+
+	
+	
+	
+</beans>

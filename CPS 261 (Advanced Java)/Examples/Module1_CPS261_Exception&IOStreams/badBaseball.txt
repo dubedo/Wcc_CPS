@@ -1,0 +1,5 @@
+Fred 2 0.301
+Bubba 28 0.278
+Frank 10 0250
+Babe 55x 0.320
+Ted 19 0.350

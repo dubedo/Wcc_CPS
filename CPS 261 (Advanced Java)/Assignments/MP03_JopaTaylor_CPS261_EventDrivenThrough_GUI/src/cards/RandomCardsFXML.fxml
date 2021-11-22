@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="485.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cards.RandomCardsController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="493.0" minWidth="10.0" prefWidth="484.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="287.0" minHeight="0.0" prefHeight="177.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="400.0" minHeight="10.0" prefHeight="223.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <HBox GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+         <children>
+            <ImageView fx:id="cardPane1" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:C:\Users\idube\Eclipse Workspace\MP03_JopaTaylor_CPS261_EventDrivenThrough_GUI\card\back.png" />
+               </image>
+               <HBox.margin>
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fx:id="cardPane2" fitHeight="150.0" fitWidth="200.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../card/back.png" />
+               </image>
+               <HBox.margin>
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fx:id="cardPane3" fitHeight="150.0" fitWidth="200.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../card/back.png" />
+               </image>
+               <HBox.margin>
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fx:id="cardPane4" fitHeight="150.0" fitWidth="200.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../card/back.png" />
+               </image>
+               <HBox.margin>
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="1. Click the Deal Button to Get Reset the Cards" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Text layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2. Click on the Individual Cards to Reveal" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Text>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="223.0" prefWidth="232.0">
+               <children>
+                  <Button fx:id="dealButton" alignment="CENTER_RIGHT" mnemonicParsing="false" onMouseClicked="#deal" text="Deal" textAlignment="CENTER" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</GridPane>

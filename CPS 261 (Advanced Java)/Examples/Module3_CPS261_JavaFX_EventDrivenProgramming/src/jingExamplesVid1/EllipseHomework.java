@@ -21,14 +21,14 @@ public class EllipseHomework extends Application {
 		while (root.widthProperty().subtract(i).getValue() > 0) {
 			ellipse = new Ellipse();
 			ellipse.centerXProperty().bind(root.widthProperty().divide(2));
-			ellipse.centerYProperty().bind(root.widthProperty().divide(2));
+			ellipse.centerYProperty().bind(root.heightProperty().divide(2));
 			ellipse.radiusXProperty().bind(root.widthProperty().divide(2).subtract(i));
-			ellipse.radiusYProperty().bind(root.widthProperty().divide(2).subtract(i));
+			ellipse.radiusYProperty().bind(root.heightProperty().divide(2).subtract(i));
 
 			ellipse.setStroke(Color.color(Math.random(), Math.random(), Math.random()));
 			ellipse.setFill(null);
 
-			i += 3;
+			i += 2;
 
 			root.getChildren().add(ellipse);
 

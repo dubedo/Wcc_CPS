@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="jingExamplesVid3.Sample">
+	<center>
+		<TabPane BorderPane.alignment="CENTER">
+			<tabs>
+				<Tab text="Add Record">
+					<content>
+						<GridPane prefHeight="168.0" prefWidth="393.0">
+							<columnConstraints>
+								<ColumnConstraints hgrow="SOMETIMES"
+									maxWidth="279.0" minWidth="10.0" prefWidth="272.0" />
+								<ColumnConstraints hgrow="SOMETIMES"
+									maxWidth="180.0" minWidth="10.0" prefWidth="98.0" />
+							</columnConstraints>
+							<rowConstraints>
+								<RowConstraints minHeight="10.0"
+									prefHeight="30.0" vgrow="SOMETIMES" />
+								<RowConstraints minHeight="10.0"
+									prefHeight="30.0" vgrow="SOMETIMES" />
+								<RowConstraints minHeight="10.0"
+									prefHeight="30.0" vgrow="SOMETIMES" />
+							</rowConstraints>
+							<children>
+								<ChoiceBox fx:id="classList" prefWidth="150.0">
+
+								</ChoiceBox>
+								<HBox prefHeight="100.0" prefWidth="200.0"
+									GridPane.rowIndex="1">
+									<children>
+										<RadioButton id="onlineR" fx:id="onlineR"
+											mnemonicParsing="false" onAction="#onRBtnSelected"
+											text="online">
+											<toggleGroup>
+												<ToggleGroup fx:id="classOption" />
+											</toggleGroup>
+										</RadioButton>
+										<RadioButton id="mixedModeR" fx:id="mixedModeR"
+											mnemonicParsing="false" onAction="#onRBtnSelected"
+											text="mixed mode" toggleGroup="$classOption" />
+										<RadioButton id="f2fR" fx:id="f2fR"
+											mnemonicParsing="false" onAction="#onRBtnSelected"
+											text="face 2 face" toggleGroup="$classOption" />
+									</children>
+								</HBox>
+								<TextArea fx:id="noteField" prefHeight="200.0"
+									prefWidth="200.0" GridPane.rowIndex="2" />
+								<Button fx:id="addBtn" mnemonicParsing="false"
+									onAction="#onAddClicked" text="Add" GridPane.columnIndex="1"
+									GridPane.rowIndex="2" />
+							</children>
+						</GridPane>
+					</content>
+				</Tab>
+				<Tab text="Display Record">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0"
+							prefHeight="180.0" prefWidth="200.0">
+							<children>
+								<TextArea fx:id="listTxtArea" layoutX="8.0"
+									layoutY="5.0" prefHeight="170.0" prefWidth="365.0" />
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+			</tabs>
+		</TabPane>
+	</center>
+	<top>
+		<FlowPane prefHeight="49.0" prefWidth="200.0"
+			BorderPane.alignment="CENTER" />
+	</top>
+</BorderPane>

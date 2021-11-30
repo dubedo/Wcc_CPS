@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="ISO-8859-1">
+<title>Form</title>
+
+</head>
+
+<body>
+
+	<form action="results.html" method="GET" enctype="mulipart/form-data">
+
+		<div>
+			<label for="name" id="name">Name</label> <input type="text"
+				name="name" value="user" required>
+		</div>
+
+		<div>
+			<label>Password <input type="password" name="password"
+				placeholder="Password"></label>
+		</div>
+
+		<div>
+			<label for="email">Email</label> <input type="email" name="email"
+				id="email" required>
+		</div>
+
+		<div>
+			<label for="age">Age</label> <input type="number" name="age" id="age"
+				min="1" max="200" step="5">
+		</div>
+
+		<div>
+			<label for="date">Birthdate</label> <input type="date" name="date"
+				id="date" min="2019-06-10">
+		</div>
+
+		<div>
+			Favorite Food
+
+			<div>
+				<label for="banana">Banana</label> <input type="checkbox"
+					name="banana" id="banana">
+			</div>
+
+			<div>
+				<label for="apple">Apple</label> <input type="checkbox" name="apple"
+					id="apple">
+			</div>
+
+			<div>
+				<label for="strawberry">Strawberry</label> <input type="checkbox"
+					name="strawberry" id="strawberry">
+			</div>
+		</div>
+
+		<div>
+			<label for="jonathan">Jonathan</label> <input type="radio"
+				name="betterName" id="jonathan" value="Jonathan"> <label
+				for="jon">Jon</label> <input type="radio" name="betterName" id="jon"
+				value="Jon">
+		</div>
+
+		<div>
+
+			<label for="eyecolor">Eye Color</label> <select name="eyecolor"
+				id="eyecolor" multiple>
+				<option value="Green">Green</option>
+				<option label="Blue" value="Blue"></option>
+			</select>
+
+		</div>
+
+		<div>
+
+			<label for="bio">Bio</label>
+			<textarea rows="" cols="" name="bio" id="bio"></textarea>
+
+		</div>
+
+		<input type="hidden" name="hidden" value="Hi">
+
+		<div>
+
+			<label for="file">File</label> <input type="file" name="file"
+				id="file">
+
+		</div>
+
+		<button type="submit">Submit</button>
+		<button type="reset">Reset</button>
+
+	</form>
+
+</body>
+
+</html>
